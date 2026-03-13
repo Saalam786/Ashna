@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* ভাসমান টেক্সট স্টাইল */
+        .bg-text {
+            position: absolute;
+            bottom: -100px;
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 14px;
+            white-space: nowrap;
+            z-index: 1;
+            pointer-events: none;
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-120vh); opacity: 0; }
+        }
+
+        /* আলাদা আলাদা সময়ে ভাসার জন্য সময় সেট করা */
+        .t1 { left: 10%; animation-duration: 12s; }
+        .t2 { left: 40%; animation-duration: 15s; animation-delay: 2s; }
+        .t3 { left: 70%; animation-duration: 18s; animation-delay: 5s; }
+        .t4 { left: 25%; animation-duration: 14s; animation-delay: 7s; }
+
+        /* কার্ড ডিজাইন */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px 20px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            z-index: 5;
+            animation: slideIn 1.2s ease-out;
+        }
+
+        .birthday-photo {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ffd700;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+
+        h1 { font-size: 22px; color: #ffd700; margin-bottom: 15px; }
+        p { font-size: 15px; line-height: 1.6; color: #f0f0f0; margin-bottom: 10px; text-align: justify; }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-text t1">Stay Happy Always ✨</div>
+    <div class="bg-text t2">Keep Shining 🌟</div>
+    <div class="bg-text t3">Best Wishes for You 🎂</div>
+    <div class="bg-text t4">HBD to You! 🎉</div>
+
+    <div class="glass-card">
+        <img src="WhatsApp Image 2026-03-13 at 11.37.54 PM.jpeg" alt="Birthday Person" class="birthday-photo">
+        
+        <h1>Happy Birthday! 🎂</h1>
+        
+        <p>May your special day be filled with happiness and laughter. I truly wish that you achieve all your dreams and keep shining always.</p>
+        
+        <p>Life takes us on different paths, but the good memories always stay. No matter where we are, I genuinely wish the best for you. 🌟</p>
+        
+        <p style="font-weight: bold; color: #ffd700; font-size: 14px; text-align: center;">Stay Blessed Always!</p>
+    </div>
+
+</body>
+</html>
